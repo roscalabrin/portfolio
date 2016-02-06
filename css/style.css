@@ -1,8 +1,18 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
-.h6, h1, h2, h3, h4, h5, h6 {
+.h6, h1, h2, h3, h4, h5, h6, .reference {
 	font-family: "Raleway", serif;
+}
+
+.testimonials {
+  font-family: "Raleway", serif;
+  font-size: 1.1em;
+  color: #1fbed6;
+}
+
+.stats-text {
+  color: #fff;
 }
 
 .intro-bio {
@@ -26,6 +36,7 @@ footer, span {
   color: #8834ab;
 }
 
+
 /* COVER
 -------------------------------------------------- */
 
@@ -46,15 +57,21 @@ a:hover {
   border: none;
 }
 
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
+  position: relative;
+  background-image: url('../img/Cover4.jpg');
+  opacity: 90%;
   display: table;
   width: 100%;
   height: 800px; /* For at least Firefox */
   min-height: 100px;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+.site-wrapper > img {
+  
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -65,24 +82,62 @@ a:hover {
   margin-left: auto;
 }
 
-/* Padding for spacing */
+.cover {
+  padding: 0 20px;
+}
+
+.cover-heading {
+  padding-top: 260px;
+  position: relative;
+  font-weight: 800;
+  font-size: 4em;
+}
+
+.cover-heading, .lead {
+  text-align: center;
+  color: #000;
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+}
+
+.glyphicon.glyphicon-chevron-down {
+  color: #000;
+}
+
+/* Padding and Margin for spacing */
 .inner {
   padding: 30px;
 }
 
+.about-me {
+  margin-bottom: 40px;
+}
 
-/*
- * Header
- */
+/* HEADER */
+.nav {
+  transition-duration: 1s;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+}
+
+#nav-home{
+  margin-left: 40px;
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .masthead-nav {
+  float: left;
   position: fixed;
-  margin-left: 70%;
-}
+  }
 
 .masthead-nav > li {
   display: inline-block;
@@ -124,34 +179,6 @@ a:hover {
 }
 
 
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-
-.cover-heading {
-  padding-top: 260px;
-  font-weight: 800;
-  font-size: 4em;
-}
-
-.cover-heading, .lead {
-  text-align: center;
-  color: #000;
-}
-
-.site-wrapper {
-  background-image: url('../img/Homepage_Me5.jpg');
-  opacity: 0.75;
-}
-
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -180,12 +207,12 @@ a:hover {
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  height: 500px;
+  height: 300px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -195,7 +222,7 @@ a:hover {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 300px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -203,29 +230,108 @@ a:hover {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 400px;
+}
+
+.quote {
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+.reference, .reference > a {
+  font-size: 1em;
+  color: #3e8cb1;
+}
+
+/* STATS
+-------------------------------------------------- */
+
+#Stats {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.numbers {
+  text-align: center;
+}
+
+.numbers_desc {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.jumbotron {
+  position: relative;
+  background: url("../img/stats_background.jpg") center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.glyphicon {
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 2.5em;
+}
+
+.glyphicon-time, .glyphicon-comment, .glyphicon-tasks, .glyphicon-globe {
+  margin-bottom: -30px;
 }
 
 
-/* MARKETING CONTENT
+/* SKILLS CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
+
+#experience {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.skills {
   text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
+.glyphicon-search, .glyphicon-road, .glyphicon-console {
+  text-align: center;
+  color: #333;
+  display: block;
+  font-size: 2.5em;
+}
 
-/* Featurettes
+.skill-info {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ABOUT ME
 ------------------------- */
+
+#me-info-title {
+  padding-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#me-info {
+  margin-left: 0px;
+  background-color: #d2d2d2;
+}
+
+#me-img {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.featurette-image.img-responsive.center-block {
+  margin-bottom: 20px;
+}
 
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
@@ -238,11 +344,28 @@ a:hover {
 	font-family: "Raleway", serif;
 }
 
+.table {
+  margin-bottom: 0px;
+  height: 400px;
+}
+
+.fa.fa-github.fa-2x, .fa.fa-linkedin.fa-2x {
+  margin-right: 20px;
+  color: #333;
+}
+
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 800;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+/* FORM
+------------------------- */
+
+.form-horizontal {
+  margin-top: 30px;
 }
 
 /* RESPONSIVE CSS
